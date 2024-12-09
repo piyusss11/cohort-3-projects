@@ -18,7 +18,7 @@ const Sidebar = () => {
   const handleSidebarClose = () => {
     setShowSidebar(!showSidebar);
     console.log(showSidebar);
-  }
+  };
   const menuItems = [
     { name: "Home", defaultIcon: Home, hoverIcon: fillHome },
     { name: "Webinars", defaultIcon: Webinar, hoverIcon: fillWebinar },
@@ -32,11 +32,18 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className={`bg-[#FEFEFE] p-4 ${showSidebar ?"w-[300px]" : "w-20 overflow-hidden"} `}>
+    <div
+      className={`bg-[#FEFEFE] lg:h-full flex justify-between items-center  duration-300 lg:relative lg:block p-4 absolute  bottom-0 w-full   ${
+        showSidebar ? "lg:w-[300px] " : " lg:w-20 overflow-hidden"
+      } `}
+    >
       <div className="flex justify-between items-center">
-        <h1 className={`${showSidebar ? "block" : "hidden"}`}>Webinar.gg</h1>
-        <img onClick={handleSidebarClose}
-          className="w-12 h-12 rounded cursor-pointer"
+        <h1 className={`hidden ${showSidebar ? "lg:block" : "hidden"}`}>
+          Webinar.gg
+        </h1>
+        <img
+          onClick={handleSidebarClose}
+          className="hidden lg:block w-11 h-12 rounded cursor-pointer"
           src="https://avatars.githubusercontent.com/u/143982052?v=4"
           alt=""
         />
@@ -45,7 +52,7 @@ const Sidebar = () => {
       {menuItems.map((item) => (
         <div
           key={item.name}
-          className={`flex justify-between items-center my-6 p-2 rounded transition-all ${
+          className={`flex justify-between items-center my-6 p-2 rounded ${
             hovered === item.name
               ? "text-[#07344e] bg-[#E4E9EF] cursor-pointer font-semibold duration-300"
               : "text-gray-600"
@@ -53,9 +60,11 @@ const Sidebar = () => {
           onMouseEnter={() => setHovered(item.name)}
           onMouseLeave={() => setHovered(null)}
         >
-          <h1 className={`${showSidebar ? "block" : "hidden"}`}>{item.name}</h1>
+          <h1 className={`hidden ${showSidebar ? "lg:block " : " hidden"}`}>
+            {item.name}
+          </h1>
           <img
-            className="w-6 h-6"
+            className="w-6 h-6 duration-1000"
             src={hovered === item.name ? item.hoverIcon : item.defaultIcon}
             alt={`${item.name} icon`}
           />

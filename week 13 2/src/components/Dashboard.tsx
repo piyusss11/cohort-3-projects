@@ -18,23 +18,29 @@ const Dashboard = () => {
           src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D"
           alt=""
         />
-        <div className="grid grid-cols-10 h-full">
-          <div className="col-span-2 bg-white ml-12 -mt-8 h-72 w-52 rounded-lg shadow-lg p-8 flex flex-col justify-center items-center">
-            <img
-              className="w-20 h-20 rounded"
-              src="https://avatars.githubusercontent.com/u/143982052?v=4"
-              alt=""
-            />
-            <h1 className="font-semibold text-lg mt-4 ">Piyush Chauhan</h1>
-            <h1 className="text-gray-600 text-sm my-2">piyusss11@gmail.com</h1>
-            <h1 className="text-gray-600 text-sm">9988776655</h1>
-            <h1 className="text-gray-600 text-sm mt-2">Delhi,India</h1>
+        <div className="lg:grid lg:grid-cols-10 flex flex-col items-center h-full">
+          <div className="lg:col-span-2">
+            <div className=" bg-white lg:-mt-[340px]  lg:ml-12 -mt-8 h-72 w-52 rounded-lg shadow-lg p-8 flex flex-col justify-center items-center">
+              <img
+                className="w-20 h-20 rounded"
+                src="https://avatars.githubusercontent.com/u/143982052?v=4"
+                alt=""
+              />
+              <h1 className="font-semibold text-lg mt-4 ">Piyush Chauhan</h1>
+              <h1 className="text-gray-600 text-sm my-2">
+                piyusss11@gmail.com
+              </h1>
+              <h1 className="text-gray-600 text-sm">9988776655</h1>
+              <h1 className="text-gray-600 text-sm mt-2">Delhi,India</h1>
+            </div>
           </div>
           <div className="col-span-5 bg-[#eeeee4] p-4  h-full">
-            <h1 className="tracking-tighter my-2">Monday, 14 October</h1>
-            <h1 className="text-3xl font-semibold my-2">
-              Good morning, Piyush!👋
-            </h1>
+            <div className="text-center lg:text-left">
+              <h1 className="tracking-tighter my-2">Monday, 14 October</h1>
+              <h1 className="text-3xl font-semibold my-2">
+                Good morning, Piyush!👋
+              </h1>
+            </div>
             <div className="w-[95%] h-80 mt-12 p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between bg-[#F5F7F7] px-4 py-2 rounded">
                 <div className="flex items-center gap-4">
@@ -87,7 +93,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-3 h-full bg-[#eeeee4]">
+          <div className="col-span-3 h-full bg-[#eeeee4] lg:mb-0 mb-40">
             <div className="bg-white mt-36 p-4 flex flex-wrap items-center gap-10 w-80 h-64 rounded-lg shadow-lg">
               <div className="flex flex-col items-center justify-center">
                 <div className="bg-[#3fdccf] w-12 h-12 rounded flex justify-center items-center">
